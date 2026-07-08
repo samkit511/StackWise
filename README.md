@@ -21,6 +21,24 @@ Early product teams often choose technologies without connecting business requir
 - Printable HTML report export.
 - Dockerized frontend, backend, and PostgreSQL database.
 
+## Screenshots
+
+### Home Dashboard
+
+![StackWise home dashboard](docs/screenshots/home.png)
+
+### Multi-step Questionnaire
+
+![StackWise multi-step questionnaire](docs/screenshots/questionnaire.png)
+
+### Recommendation Dashboard
+
+![StackWise recommendation dashboard](docs/screenshots/recommendation-dashboard.png)
+
+### Printable Report Export
+
+![StackWise printable report export](docs/screenshots/report-export.png)
+
 ## Architecture
 
 - `Frontend`: React, TypeScript, Vite, TailwindCSS, React Router, React Hook Form, Zod, TanStack Query, Axios, Recharts, Mermaid.js.
