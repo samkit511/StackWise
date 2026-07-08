@@ -21,6 +21,13 @@ Early product teams often choose technologies without connecting business requir
 - Printable HTML report export.
 - Dockerized frontend, backend, and PostgreSQL database.
 
+## Submission Documents
+
+- [Installation Guide](INSTALLATION_GUIDE.md)
+- [User Manual](USER_MANUAL.md)
+- [Architecture Documentation](ARCHITECTURE.md)
+- [Software Test Document](SOFTWARE_TEST_DOCUMENT.md)
+
 ## Screenshots
 
 ### Home Dashboard
