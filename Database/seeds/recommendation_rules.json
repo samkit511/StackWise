@@ -1,0 +1,233 @@
+[
+  {
+    "technology": "React",
+    "conditions": {
+      "project_type": [
+        "saas",
+        "marketplace",
+        "dashboard"
+      ],
+      "team_frontend": [
+        "react",
+        "typescript",
+        "mixed"
+      ]
+    },
+    "positive_weight": 30,
+    "negative_weight": 4,
+    "compatibility_score": 95,
+    "cost_score": 88,
+    "scalability_score": 90,
+    "learning_curve_score": 82
+  },
+  {
+    "technology": "Next.js",
+    "conditions": {
+      "need_seo": true
+    },
+    "positive_weight": 24,
+    "negative_weight": 7,
+    "compatibility_score": 90,
+    "cost_score": 82,
+    "scalability_score": 90,
+    "learning_curve_score": 75
+  },
+  {
+    "technology": "Vue",
+    "conditions": {
+      "team_frontend": [
+        "vue"
+      ],
+      "timeline": [
+        "urgent",
+        "normal"
+      ]
+    },
+    "positive_weight": 16,
+    "negative_weight": 5,
+    "compatibility_score": 83,
+    "cost_score": 90,
+    "scalability_score": 82,
+    "learning_curve_score": 88
+  },
+  {
+    "technology": "FastAPI",
+    "conditions": {
+      "need_ai": true,
+      "team_backend": [
+        "python",
+        "mixed"
+      ],
+      "project_type": [
+        "saas",
+        "ai",
+        "dashboard"
+      ]
+    },
+    "positive_weight": 32,
+    "negative_weight": 3,
+    "compatibility_score": 96,
+    "cost_score": 90,
+    "scalability_score": 92,
+    "learning_curve_score": 86
+  },
+  {
+    "technology": "Django",
+    "conditions": {
+      "admin_heavy": true,
+      "team_backend": [
+        "python"
+      ]
+    },
+    "positive_weight": 20,
+    "negative_weight": 6,
+    "compatibility_score": 88,
+    "cost_score": 86,
+    "scalability_score": 82,
+    "learning_curve_score": 76
+  },
+  {
+    "technology": "Node.js",
+    "conditions": {
+      "need_realtime": true,
+      "team_backend": [
+        "typescript",
+        "javascript",
+        "mixed"
+      ]
+    },
+    "positive_weight": 23,
+    "negative_weight": 6,
+    "compatibility_score": 88,
+    "cost_score": 86,
+    "scalability_score": 86,
+    "learning_curve_score": 78
+  },
+  {
+    "technology": "PostgreSQL",
+    "conditions": {
+      "data_complexity": [
+        "relational",
+        "mixed"
+      ],
+      "requires_reporting": true
+    },
+    "positive_weight": 34,
+    "negative_weight": 2,
+    "compatibility_score": 98,
+    "cost_score": 91,
+    "scalability_score": 90,
+    "learning_curve_score": 80
+  },
+  {
+    "technology": "MongoDB",
+    "conditions": {
+      "data_complexity": [
+        "document"
+      ],
+      "timeline": [
+        "urgent"
+      ]
+    },
+    "positive_weight": 18,
+    "negative_weight": 7,
+    "compatibility_score": 82,
+    "cost_score": 80,
+    "scalability_score": 84,
+    "learning_curve_score": 86
+  },
+  {
+    "technology": "Redis",
+    "conditions": {
+      "need_realtime": true,
+      "expected_users": ">10000"
+    },
+    "positive_weight": 18,
+    "negative_weight": 4,
+    "compatibility_score": 92,
+    "cost_score": 82,
+    "scalability_score": 95,
+    "learning_curve_score": 76
+  },
+  {
+    "technology": "Docker",
+    "conditions": {
+      "deployment": [
+        "docker",
+        "cloud",
+        "portable"
+      ]
+    },
+    "positive_weight": 24,
+    "negative_weight": 1,
+    "compatibility_score": 96,
+    "cost_score": 92,
+    "scalability_score": 88,
+    "learning_curve_score": 78
+  },
+  {
+    "technology": "AWS",
+    "conditions": {
+      "expected_users": ">100000",
+      "compliance": true
+    },
+    "positive_weight": 22,
+    "negative_weight": 8,
+    "compatibility_score": 90,
+    "cost_score": 68,
+    "scalability_score": 98,
+    "learning_curve_score": 60
+  },
+  {
+    "technology": "Render",
+    "conditions": {
+      "budget_level": [
+        "low",
+        "medium"
+      ],
+      "timeline": [
+        "urgent",
+        "normal"
+      ]
+    },
+    "positive_weight": 20,
+    "negative_weight": 4,
+    "compatibility_score": 86,
+    "cost_score": 90,
+    "scalability_score": 76,
+    "learning_curve_score": 90
+  },
+  {
+    "technology": "JWT Authentication",
+    "conditions": {
+      "features": [
+        "authentication"
+      ],
+      "backend_control": true
+    },
+    "positive_weight": 18,
+    "negative_weight": 3,
+    "compatibility_score": 90,
+    "cost_score": 95,
+    "scalability_score": 85,
+    "learning_curve_score": 78
+  },
+  {
+    "technology": "Firebase Authentication",
+    "conditions": {
+      "features": [
+        "authentication"
+      ],
+      "timeline": [
+        "urgent"
+      ],
+      "backend_control": false
+    },
+    "positive_weight": 14,
+    "negative_weight": 8,
+    "compatibility_score": 76,
+    "cost_score": 78,
+    "scalability_score": 80,
+    "learning_curve_score": 90
+  }
+]

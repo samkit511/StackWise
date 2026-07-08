@@ -1,0 +1,100 @@
+[
+  {
+    "trigger": "payments",
+    "recommendations": [
+      {
+        "feature": "Invoices",
+        "priority": "High",
+        "business_impact": "Improves customer trust and accounting readiness",
+        "reason": "Payment workflows usually require proof of purchase."
+      },
+      {
+        "feature": "Refunds",
+        "priority": "High",
+        "business_impact": "Reduces support friction",
+        "reason": "Customers need a safe reversal path for failed or disputed payments."
+      },
+      {
+        "feature": "Tax Calculation",
+        "priority": "Medium",
+        "business_impact": "Supports compliant sales operations",
+        "reason": "Paid products often need region-aware tax handling."
+      },
+      {
+        "feature": "Transaction History",
+        "priority": "High",
+        "business_impact": "Improves finance visibility",
+        "reason": "Users and admins need payment auditability."
+      }
+    ]
+  },
+  {
+    "trigger": "authentication",
+    "recommendations": [
+      {
+        "feature": "Password Reset",
+        "priority": "High",
+        "business_impact": "Reduces account support load",
+        "reason": "Self-service credential recovery is expected in authenticated products."
+      },
+      {
+        "feature": "Email Verification",
+        "priority": "High",
+        "business_impact": "Improves account quality",
+        "reason": "Verified emails reduce abuse and delivery issues."
+      },
+      {
+        "feature": "Two Factor Authentication",
+        "priority": "Medium",
+        "business_impact": "Raises security posture",
+        "reason": "Sensitive accounts benefit from second-factor protection."
+      },
+      {
+        "feature": "Session Management",
+        "priority": "High",
+        "business_impact": "Improves security and usability",
+        "reason": "Users need reliable login persistence and logout behavior."
+      },
+      {
+        "feature": "RBAC",
+        "priority": "Medium",
+        "business_impact": "Supports team workflows",
+        "reason": "Role-based access becomes important as teams grow."
+      }
+    ]
+  },
+  {
+    "trigger": "realtime",
+    "recommendations": [
+      {
+        "feature": "Presence Indicators",
+        "priority": "Medium",
+        "business_impact": "Makes collaboration clearer",
+        "reason": "Realtime apps need visible user activity state."
+      },
+      {
+        "feature": "Event Audit Log",
+        "priority": "Medium",
+        "business_impact": "Improves troubleshooting",
+        "reason": "Realtime events are hard to debug without traceability."
+      }
+    ]
+  },
+  {
+    "trigger": "analytics",
+    "recommendations": [
+      {
+        "feature": "Dashboard Metrics",
+        "priority": "High",
+        "business_impact": "Improves decision making",
+        "reason": "Analytics requirements need visible operational metrics."
+      },
+      {
+        "feature": "Exportable Reports",
+        "priority": "Medium",
+        "business_impact": "Supports stakeholder sharing",
+        "reason": "Teams often need offline or printable analytics outputs."
+      }
+    ]
+  }
+]

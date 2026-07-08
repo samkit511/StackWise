@@ -1,0 +1,42 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: stackwise
+      POSTGRES_USER: stackwise
+      POSTGRES_PASSWORD: stackwise
+    ports:
+      - "5433:5432"
+    volumes:
+      - stackwise_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U stackwise -d stackwise"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: Backend/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://stackwise:stackwise@postgres:5432/stackwise
+      BACKEND_CORS_ORIGINS: http://localhost:5173,http://localhost:8080
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./Frontend
+      args:
+        VITE_API_BASE_URL: http://localhost:8000/api
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+volumes:
+  stackwise_postgres_data:

@@ -1,0 +1,72 @@
+[
+  {
+    "source": "FastAPI",
+    "target": "PostgreSQL",
+    "status": "compatible",
+    "score": 98,
+    "reason": "FastAPI works cleanly with SQLAlchemy and PostgreSQL for typed API products."
+  },
+  {
+    "source": "FastAPI",
+    "target": "Redis",
+    "status": "compatible",
+    "score": 92,
+    "reason": "Redis adds cache and background coordination for FastAPI services."
+  },
+  {
+    "source": "FastAPI",
+    "target": "Docker",
+    "status": "compatible",
+    "score": 96,
+    "reason": "FastAPI containers are simple to package and deploy."
+  },
+  {
+    "source": "FastAPI",
+    "target": "Firebase Authentication",
+    "status": "warning",
+    "score": 62,
+    "reason": "Firebase Auth can work, but custom backend authorization requires extra integration."
+  },
+  {
+    "source": "React",
+    "target": "FastAPI",
+    "status": "compatible",
+    "score": 94,
+    "reason": "React consumes FastAPI REST endpoints through a clean API boundary."
+  },
+  {
+    "source": "React",
+    "target": "Vue",
+    "status": "incompatible",
+    "score": 10,
+    "reason": "React and Vue are alternative frontend frameworks for the same UI layer."
+  },
+  {
+    "source": "Next.js",
+    "target": "React",
+    "status": "compatible",
+    "score": 85,
+    "reason": "Next.js is React-based, but a project should usually choose SPA React or Next.js as the app shell."
+  },
+  {
+    "source": "PostgreSQL",
+    "target": "MongoDB",
+    "status": "warning",
+    "score": 50,
+    "reason": "Using two primary databases increases operational complexity for MVPs."
+  },
+  {
+    "source": "AWS",
+    "target": "Docker",
+    "status": "compatible",
+    "score": 88,
+    "reason": "Dockerized services deploy well to AWS container services."
+  },
+  {
+    "source": "Render",
+    "target": "Docker",
+    "status": "compatible",
+    "score": 86,
+    "reason": "Render supports simple Docker-based web service deployment."
+  }
+]

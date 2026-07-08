@@ -1,0 +1,358 @@
+[
+  {
+    "name": "React",
+    "category": "Frontend",
+    "language": "TypeScript",
+    "supports_ai": true,
+    "supports_realtime": true,
+    "learning_curve": "Medium",
+    "community": "Large",
+    "performance": "High",
+    "cost": "Low",
+    "official_url": "https://react.dev/",
+    "pros": [
+      "Large ecosystem",
+      "Strong TypeScript support",
+      "Reusable components"
+    ],
+    "cons": [
+      "Requires framework decisions",
+      "State management can grow complex"
+    ],
+    "use_cases": [
+      "Dashboards",
+      "SaaS apps",
+      "Interactive web applications"
+    ]
+  },
+  {
+    "name": "Next.js",
+    "category": "Frontend",
+    "language": "TypeScript",
+    "supports_ai": true,
+    "supports_realtime": true,
+    "learning_curve": "Medium",
+    "community": "Large",
+    "performance": "High",
+    "cost": "Low",
+    "official_url": "https://nextjs.org/",
+    "pros": [
+      "SSR and static rendering",
+      "Excellent routing",
+      "Strong deployment ecosystem"
+    ],
+    "cons": [
+      "More framework complexity than React SPA",
+      "Server features need careful hosting"
+    ],
+    "use_cases": [
+      "SEO-focused products",
+      "Content-heavy apps",
+      "Full-stack web apps"
+    ]
+  },
+  {
+    "name": "Vue",
+    "category": "Frontend",
+    "language": "TypeScript",
+    "supports_ai": true,
+    "supports_realtime": true,
+    "learning_curve": "Low",
+    "community": "Large",
+    "performance": "High",
+    "cost": "Low",
+    "official_url": "https://vuejs.org/",
+    "pros": [
+      "Approachable syntax",
+      "Good performance",
+      "Flexible architecture"
+    ],
+    "cons": [
+      "Smaller hiring pool than React in many markets"
+    ],
+    "use_cases": [
+      "Admin panels",
+      "Progressive interfaces",
+      "Small and medium apps"
+    ]
+  },
+  {
+    "name": "FastAPI",
+    "category": "Backend",
+    "language": "Python",
+    "supports_ai": true,
+    "supports_realtime": true,
+    "learning_curve": "Low",
+    "community": "Large",
+    "performance": "High",
+    "cost": "Low",
+    "official_url": "https://fastapi.tiangolo.com/",
+    "pros": [
+      "Fast development",
+      "Typed APIs",
+      "Automatic OpenAPI docs"
+    ],
+    "cons": [
+      "Async patterns require discipline"
+    ],
+    "use_cases": [
+      "APIs",
+      "AI products",
+      "Recommendation services"
+    ]
+  },
+  {
+    "name": "Django",
+    "category": "Backend",
+    "language": "Python",
+    "supports_ai": true,
+    "supports_realtime": false,
+    "learning_curve": "Medium",
+    "community": "Large",
+    "performance": "Medium",
+    "cost": "Low",
+    "official_url": "https://www.djangoproject.com/",
+    "pros": [
+      "Batteries included",
+      "Admin interface",
+      "Mature ORM"
+    ],
+    "cons": [
+      "Heavier than API-first frameworks",
+      "Async story is less direct"
+    ],
+    "use_cases": [
+      "CRUD platforms",
+      "Content systems",
+      "Admin-heavy applications"
+    ]
+  },
+  {
+    "name": "Node.js",
+    "category": "Backend",
+    "language": "TypeScript",
+    "supports_ai": true,
+    "supports_realtime": true,
+    "learning_curve": "Medium",
+    "community": "Large",
+    "performance": "High",
+    "cost": "Low",
+    "official_url": "https://nodejs.org/",
+    "pros": [
+      "Shared frontend language",
+      "Realtime friendly",
+      "Huge package ecosystem"
+    ],
+    "cons": [
+      "Dependency quality varies",
+      "CPU-heavy work needs care"
+    ],
+    "use_cases": [
+      "Realtime APIs",
+      "BFF layers",
+      "JavaScript teams"
+    ]
+  },
+  {
+    "name": "PostgreSQL",
+    "category": "Database",
+    "language": "SQL",
+    "supports_ai": true,
+    "supports_realtime": false,
+    "learning_curve": "Medium",
+    "community": "Large",
+    "performance": "High",
+    "cost": "Low",
+    "official_url": "https://www.postgresql.org/",
+    "pros": [
+      "Reliable relational model",
+      "JSON support",
+      "Strong indexing"
+    ],
+    "cons": [
+      "Requires schema discipline"
+    ],
+    "use_cases": [
+      "Transactional apps",
+      "Analytics-ready products",
+      "Core data stores"
+    ]
+  },
+  {
+    "name": "MongoDB",
+    "category": "Database",
+    "language": "Document",
+    "supports_ai": true,
+    "supports_realtime": false,
+    "learning_curve": "Low",
+    "community": "Large",
+    "performance": "High",
+    "cost": "Medium",
+    "official_url": "https://www.mongodb.com/",
+    "pros": [
+      "Flexible documents",
+      "Fast iteration",
+      "Good managed service"
+    ],
+    "cons": [
+      "Relationships and transactions need careful modeling"
+    ],
+    "use_cases": [
+      "Content data",
+      "Flexible schemas",
+      "Event payload stores"
+    ]
+  },
+  {
+    "name": "Redis",
+    "category": "Cache",
+    "language": "Data store",
+    "supports_ai": false,
+    "supports_realtime": true,
+    "learning_curve": "Low",
+    "community": "Large",
+    "performance": "Very High",
+    "cost": "Low",
+    "official_url": "https://redis.io/",
+    "pros": [
+      "Low latency",
+      "Great caching",
+      "Queues and rate limits"
+    ],
+    "cons": [
+      "Not a primary durable database"
+    ],
+    "use_cases": [
+      "Caching",
+      "Sessions",
+      "Realtime coordination"
+    ]
+  },
+  {
+    "name": "Docker",
+    "category": "DevOps",
+    "language": "Infrastructure",
+    "supports_ai": true,
+    "supports_realtime": true,
+    "learning_curve": "Medium",
+    "community": "Large",
+    "performance": "High",
+    "cost": "Low",
+    "official_url": "https://www.docker.com/",
+    "pros": [
+      "Portable runtime",
+      "Developer parity",
+      "Simple deployment packaging"
+    ],
+    "cons": [
+      "Images require maintenance"
+    ],
+    "use_cases": [
+      "Local dev",
+      "Containerized deployment",
+      "CI environments"
+    ]
+  },
+  {
+    "name": "AWS",
+    "category": "Cloud",
+    "language": "Cloud",
+    "supports_ai": true,
+    "supports_realtime": true,
+    "learning_curve": "High",
+    "community": "Large",
+    "performance": "High",
+    "cost": "Medium",
+    "official_url": "https://aws.amazon.com/",
+    "pros": [
+      "Broadest service catalog",
+      "Global scale",
+      "Mature security tooling"
+    ],
+    "cons": [
+      "Cost governance required",
+      "Many service choices"
+    ],
+    "use_cases": [
+      "Scalable startups",
+      "Enterprise integrations",
+      "Global apps"
+    ]
+  },
+  {
+    "name": "Render",
+    "category": "Cloud",
+    "language": "Cloud",
+    "supports_ai": true,
+    "supports_realtime": true,
+    "learning_curve": "Low",
+    "community": "Medium",
+    "performance": "Medium",
+    "cost": "Low",
+    "official_url": "https://render.com/",
+    "pros": [
+      "Simple deployment",
+      "Managed PostgreSQL",
+      "Low operational load"
+    ],
+    "cons": [
+      "Less infrastructure control than hyperscalers"
+    ],
+    "use_cases": [
+      "MVPs",
+      "Small teams",
+      "Early production apps"
+    ]
+  },
+  {
+    "name": "JWT Authentication",
+    "category": "Security",
+    "language": "Protocol",
+    "supports_ai": false,
+    "supports_realtime": true,
+    "learning_curve": "Medium",
+    "community": "Large",
+    "performance": "High",
+    "cost": "Low",
+    "official_url": "https://jwt.io/",
+    "pros": [
+      "Stateless auth",
+      "API friendly",
+      "Works with SPAs"
+    ],
+    "cons": [
+      "Token revocation needs design"
+    ],
+    "use_cases": [
+      "API authentication",
+      "Session systems",
+      "Mobile apps"
+    ]
+  },
+  {
+    "name": "Firebase Authentication",
+    "category": "Security",
+    "language": "Managed service",
+    "supports_ai": false,
+    "supports_realtime": true,
+    "learning_curve": "Low",
+    "community": "Large",
+    "performance": "High",
+    "cost": "Medium",
+    "official_url": "https://firebase.google.com/docs/auth",
+    "pros": [
+      "Managed auth",
+      "Fast setup",
+      "Social login support"
+    ],
+    "cons": [
+      "Vendor coupling",
+      "Less backend ownership"
+    ],
+    "use_cases": [
+      "MVP auth",
+      "Consumer apps",
+      "Firebase-based stacks"
+    ]
+  }
+]
