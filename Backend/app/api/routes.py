@@ -97,9 +97,13 @@ def architecture(project_id: int, db: Session = Depends(get_db)) -> ApiResponse:
 
 
 @router.get("/reports/{project_id}")
-def report(project_id: int, db: Session = Depends(get_db)) -> Response:
+def report(project_id: int, download: bool = False, db: Session = Depends(get_db)) -> Response:
     recommendation = recommendation_for_project(project_id, db).data
-    return Response(content=recommendation["report_html"], media_type="text/html")
+    headers = {}
+    if download:
+        headers["Content-Disposition"] = f"attachment; filename=stackwise-report-{project_id}.html"
+    return Response(content=recommendation["report_html"], media_type="text/html", headers=headers)
+
 
 
 @router.get("/technologies")

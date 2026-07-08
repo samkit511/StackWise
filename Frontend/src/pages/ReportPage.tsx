@@ -1,4 +1,4 @@
-import { FileText, Maximize2 } from 'lucide-react';
+import { Download, FileText, Maximize2 } from 'lucide-react';
 import { useParams, Link } from 'react-router-dom';
 import { Button, SecondaryButton } from '../components/ui';
 import { reportUrl } from '../services/api';
@@ -20,6 +20,11 @@ export function ReportPage() {
           <Link to={`/recommendations/${projectId}`}>
             <SecondaryButton className="gap-2">← Back to Dashboard</SecondaryButton>
           </Link>
+          <a href={`${url}?download=true`}>
+            <SecondaryButton className="gap-2">
+              <Download size={15} /> Download HTML
+            </SecondaryButton>
+          </a>
           <a href={url} target="_blank" rel="noreferrer">
             <Button className="gap-2">
               <Maximize2 size={15} /> Open in new tab

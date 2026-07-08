@@ -284,7 +284,7 @@ export function RecommendationPage() {
           <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-foreground/65">{data.summary}</p>
         </div>
         <div className="flex flex-wrap gap-2">
-          <a href={reportUrl(projectId)} target="_blank" rel="noreferrer">
+          <a href={`${reportUrl(projectId)}?download=true`}>
             <Button className="gap-2">
               <FileText size={16} /> Export Report
             </Button>
