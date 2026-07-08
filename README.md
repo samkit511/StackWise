@@ -9,16 +9,17 @@ Early product teams often choose technologies without connecting business requir
 ## Features
 
 - Multi-step questionnaire with local progress saving.
-- Rule-based recommendation engine.
-- Structured technology knowledge base.
-- Compatibility matrix.
-- Feature recommendation engine.
-- Existing project analysis and migration report.
-- Architecture pattern recommendation.
-- Dynamic Mermaid architecture diagram.
+- Rule-based recommendation engine with weighted scoring.
+- Structured technology knowledge base (32+ technologies).
+- Compatibility matrix with color-coded status indicators.
+- Feature recommendation engine with business impact analysis.
+- Existing project analysis and structured migration report.
+- Architecture pattern recommendation with justification.
+- Dynamic Mermaid architecture diagram generation.
 - Development and infrastructure cost estimator.
-- Searchable technology knowledge base.
+- Searchable and filterable technology knowledge base with pros/cons.
 - Printable HTML report export.
+- Light and dark mode.
 - Dockerized frontend, backend, and PostgreSQL database.
 
 ## Submission Documents
@@ -83,7 +84,8 @@ Compatibility rules identify compatible, warning, and incompatible technology pa
 ## Installation
 
 ```bash
-cd "C:\Users\samkit jain\Dropbox\PC\Desktop\JTP\StackWise"
+# Clone or navigate to the project root, then:
+cd StackWise
 docker compose up --build
 ```
 
@@ -129,9 +131,21 @@ npm run build
 - `GET /api/reports/{project_id}`
 - `GET /api/technologies`
 
+## Testing
+
+```bash
+# Backend
+cd Backend
+pytest -v
+
+# Frontend
+cd Frontend
+npm test
+```
+
 ## Future Improvements
 
-- Additional report formats.
-- More technology categories.
-- Advanced comparison filters.
+- Additional report formats (PDF export).
+- More technology categories and entries.
+- Advanced comparison filters between technologies.
 - Optional GitHub import for existing project analysis.

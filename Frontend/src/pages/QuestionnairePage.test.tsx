@@ -15,7 +15,7 @@ describe('QuestionnairePage', () => {
     expect(screen.getByText(/Step 1 of 4/)).toBeInTheDocument();
     await userEvent.click(screen.getByText('Next'));
     expect(screen.getByText(/Step 2 of 4/)).toBeInTheDocument();
-    await userEvent.click(screen.getByText('Save'));
+    await userEvent.click(screen.getByText('Save draft'));
     expect(localStorage.getItem('stackwise-questionnaire')).toContain('FounderOps');
   });
 });
