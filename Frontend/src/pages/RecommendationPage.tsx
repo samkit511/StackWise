@@ -38,7 +38,7 @@ import type { Recommendation, StackItem } from '../types/api';
 
 mermaid.initialize({ startOnLoad: false, theme: 'neutral', securityLevel: 'loose' });
 
-// ─── Helpers ───────────────────────────────────────────────────────────────
+
 function confidenceBadge(score: number) {
   if (score >= 85) return <Badge variant="success">{score}% confidence</Badge>;
   if (score >= 65) return <Badge variant="warning">{score}% confidence</Badge>;
@@ -61,7 +61,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   Cache:    'hsl(38 92% 55%)',
 };
 
-// ─── Sub-components ────────────────────────────────────────────────────────
+
 function StackCard({ item }: { item: StackItem }) {
   const color = CATEGORY_COLORS[item.role] ?? 'hsl(var(--primary))';
   return (
@@ -168,7 +168,7 @@ function MigrationReport({
     return (
       <div className="flex items-center gap-3 rounded-lg border border-border bg-muted/40 p-4 text-sm text-foreground/60">
         <Info size={16} className="shrink-0" />
-        This is a new project — no existing project migration analysis was generated.
+        This is a new project, so no migration analysis was generated.
       </div>
     );
   }
@@ -227,7 +227,7 @@ function MigrationReport({
   );
 }
 
-// ─── Main Page ─────────────────────────────────────────────────────────────
+
 export function RecommendationPage() {
   const { projectId = '' } = useParams();
   const { data, isLoading } = useQuery<Recommendation>({
@@ -277,7 +277,7 @@ export function RecommendationPage() {
 
   return (
     <div className="grid gap-6 animate-fade-in">
-      {/* ── Page header ─────────────────────────────────────────────── */}
+      {}
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <h1 className="text-3xl font-extrabold tracking-tight">Recommendation Dashboard</h1>
@@ -292,7 +292,7 @@ export function RecommendationPage() {
         </div>
       </div>
 
-      {/* ── Score rings ─────────────────────────────────────────────── */}
+      {}
       <Card>
         <SectionHeader title="Overall Scores" description="Weighted across the full recommended stack" />
         <div className="mt-4 flex flex-wrap items-start justify-around gap-6">
@@ -314,7 +314,7 @@ export function RecommendationPage() {
         </div>
       </Card>
 
-      {/* ── Recommended stack + score chart ─────────────────────────── */}
+      {}
       <div className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
         <Card>
           <SectionHeader title="Recommended Stack" description="Best-scored technology per category" />
@@ -368,7 +368,7 @@ export function RecommendationPage() {
         </div>
       </div>
 
-      {/* ── Architecture diagram + Cost breakdown ───────────────────── */}
+      {}
       <div className="grid gap-5 lg:grid-cols-[1fr_1fr]">
         <Card>
           <div className="mb-3 flex items-start justify-between gap-3">
@@ -416,7 +416,7 @@ export function RecommendationPage() {
         </Card>
       </div>
 
-      {/* ── Compatibility matrix + Feature recommendations ───────────── */}
+      {}
       <div className="grid gap-5 lg:grid-cols-2">
         <Card>
           <SectionHeader
@@ -467,7 +467,7 @@ export function RecommendationPage() {
         </Card>
       </div>
 
-      {/* ── Migration report ────────────────────────────────────────── */}
+      {}
       <Card>
         <div className="mb-4">
           <SectionHeader
@@ -478,11 +478,11 @@ export function RecommendationPage() {
         <MigrationReport analysis={data.existing_project_analysis} />
       </Card>
 
-      {/* ── Alternative stack ────────────────────────────────────────── */}
+      {}
       <Card>
         <SectionHeader
           title="Alternative Technologies"
-          description="Runner-up choices — viable depending on team preference"
+          description="Runner-up choices that may fit depending on team preference"
         />
         <div className="mt-4 grid gap-3 md:grid-cols-3">
           {data.alternative_stack.map(item => (

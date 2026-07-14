@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+﻿import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 import {
   Brain,
@@ -16,7 +16,6 @@ import {
 import { Badge, Card, Chip, Field, Input } from '../components/ui';
 import { getTechnologies } from '../services/api';
 
-// ─── Category meta ─────────────────────────────────────────────────────────
 const CATEGORIES = [
   { label: 'All',       value: '',        icon: <Layers   size={14} /> },
   { label: 'Frontend',  value: 'Frontend',icon: <Globe    size={14} /> },
@@ -48,7 +47,6 @@ const COST_VARIANT: Record<string, 'success' | 'warning' | 'danger'> = {
   High:   'danger',
 };
 
-// ─── Tech card ─────────────────────────────────────────────────────────────
 function TechCard({ tech }: { tech: any }) {
   const [expanded, setExpanded] = useState(false);
   const color = CATEGORY_COLORS[tech.category] ?? 'hsl(var(--primary))';
@@ -87,19 +85,19 @@ function TechCard({ tech }: { tech: any }) {
       <div className="flex flex-wrap gap-1.5">
         {tech.performance && (
           <Badge variant={PERF_VARIANT[tech.performance] ?? 'outline'}>
-            ⚡ {tech.performance} perf
+          <Badge variant="outline">Performance: {tech.performance}</Badge>
           </Badge>
         )}
         {tech.cost && (
           <Badge variant={COST_VARIANT[tech.cost] ?? 'outline'}>
-            💰 {tech.cost} cost
+          <Badge variant="outline">Cost: {tech.cost}</Badge>
           </Badge>
         )}
         {tech.learning_curve && (
-          <Badge variant="outline">📚 {tech.learning_curve} curve</Badge>
+          <Badge variant="outline">Learning: {tech.learning_curve}</Badge>
         )}
         {tech.community && (
-          <Badge variant="outline">👥 {tech.community} community</Badge>
+          <Badge variant="outline">Community: {tech.community}</Badge>
         )}
         {tech.supports_ai && (
           <Badge variant="primary">
@@ -142,7 +140,7 @@ function TechCard({ tech }: { tech: any }) {
                   <ul className="grid gap-1">
                     {pros.map((p: string) => (
                       <li key={p} className="flex items-start gap-1.5 text-xs text-green-800 dark:text-green-300">
-                        <span className="mt-0.5 text-green-500">✓</span> {p}
+                        <span className="mt-0.5 text-green-500">+</span> {p}
                       </li>
                     ))}
                   </ul>
@@ -156,7 +154,7 @@ function TechCard({ tech }: { tech: any }) {
                   <ul className="grid gap-1">
                     {cons.map((c: string) => (
                       <li key={c} className="flex items-start gap-1.5 text-xs text-red-800 dark:text-red-300">
-                        <span className="mt-0.5 text-red-500">✗</span> {c}
+                        <span className="mt-0.5 text-red-500">-</span> {c}
                       </li>
                     ))}
                   </ul>
@@ -182,7 +180,6 @@ function TechCard({ tech }: { tech: any }) {
   );
 }
 
-// ─── Page ──────────────────────────────────────────────────────────────────
 export function TechnologiesPage() {
   const [search, setSearch]     = useState('');
   const [category, setCategory] = useState('');
@@ -198,7 +195,7 @@ export function TechnologiesPage() {
       <div>
         <h1 className="text-3xl font-extrabold tracking-tight">Technology Knowledge Base</h1>
         <p className="mt-1 text-sm text-foreground/60">
-          {data.length} technologies · Browse, search, and compare the stack options used in
+          {data.length} technologies Â· Browse, search, and compare the stack options used in
           recommendations.
         </p>
       </div>
@@ -214,7 +211,7 @@ export function TechnologiesPage() {
             <Input
               value={search}
               onChange={e => setSearch(e.target.value)}
-              placeholder="e.g. FastAPI, PostgreSQL, React…"
+              placeholder="e.g. FastAPI, PostgreSQL, React"
               className="pl-9"
             />
           </div>
@@ -272,3 +269,4 @@ export function TechnologiesPage() {
     </div>
   );
 }
+

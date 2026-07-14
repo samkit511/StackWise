@@ -31,7 +31,7 @@ import { defaultQuestionnaire } from '../constants/questionnaire';
 import { submitQuestionnaire } from '../services/api';
 import type { QuestionnaireInput } from '../types/api';
 
-// ─── Validation schema ─────────────────────────────────────────────────────
+
 const schema = z.object({
   name:              z.string().min(2,  'Project name must be at least 2 characters'),
   description:       z.string().min(10, 'Description must be at least 10 characters'),
@@ -57,7 +57,7 @@ const schema = z.object({
   pain_points:       z.array(z.string()),
 });
 
-// ─── Step definitions ──────────────────────────────────────────────────────
+
 const STEPS = [
   { label: 'Business',     icon: <Briefcase   size={16} />, id: 0 },
   { label: 'Team & Scale', icon: <Users       size={16} />, id: 1 },
@@ -66,14 +66,14 @@ const STEPS = [
 ];
 
 const FEATURE_OPTIONS = [
-  { value: 'authentication', label: 'Authentication', emoji: '🔐' },
-  { value: 'payments',       label: 'Payments',       emoji: '💳' },
-  { value: 'analytics',      label: 'Analytics',      emoji: '📊' },
-  { value: 'realtime',       label: 'Realtime',       emoji: '⚡' },
-  { value: 'notifications',  label: 'Notifications',  emoji: '🔔' },
-  { value: 'file_upload',    label: 'File Upload',    emoji: '📁' },
-  { value: 'search',         label: 'Search',         emoji: '🔍' },
-  { value: 'ai_features',    label: 'AI Features',    emoji: '🤖' },
+  { value: 'authentication', label: 'Authentication', emoji: 'Auth' },
+  { value: 'payments',       label: 'Payments',       emoji: 'Pay' },
+  { value: 'analytics',      label: 'Analytics',      emoji: 'Data' },
+  { value: 'realtime',       label: 'Realtime',       emoji: 'Live' },
+  { value: 'notifications',  label: 'Notifications',  emoji: 'Bell' },
+  { value: 'file_upload',    label: 'File Upload',    emoji: 'File' },
+  { value: 'search',         label: 'Search',         emoji: 'Find' },
+  { value: 'ai_features',    label: 'AI Features',    emoji: 'AI' },
 ];
 
 const BOOL_FIELDS: { name: keyof QuestionnaireInput; label: string; description: string }[] = [
@@ -83,10 +83,10 @@ const BOOL_FIELDS: { name: keyof QuestionnaireInput; label: string; description:
   { name: 'requires_reporting', label: 'Reporting',         description: 'Dashboards, data exports, BI tooling'  },
   { name: 'compliance',         label: 'Compliance',        description: 'GDPR, HIPAA, SOC2, or similar'         },
   { name: 'admin_heavy',        label: 'Admin-heavy',       description: 'Complex CMS or back-office features'    },
-  { name: 'backend_control',    label: 'Full Control',      description: 'Own the backend — no Firebase/BaaS'    },
+  { name: 'backend_control',    label: 'Full Control',      description: 'Own the backend, no Firebase/BaaS'    },
 ];
 
-// ─── Component ─────────────────────────────────────────────────────────────
+
 export function QuestionnairePage() {
   const navigate  = useNavigate();
   const [step, setStep] = useState(0);
@@ -128,13 +128,13 @@ export function QuestionnairePage() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      {/* ── Header ─────────────────────────────────────────────────── */}
+      {}
       <div className="animate-fade-in-up mb-6">
         <div className="flex items-start justify-between gap-4">
           <div>
             <h1 className="text-3xl font-extrabold tracking-tight">Project Questionnaire</h1>
             <p className="mt-1 text-sm text-foreground/60">
-              Answer four steps — get a fully explained stack recommendation.
+              Answer four steps and get a stack recommendation with scores and reasons.
             </p>
           </div>
           <SecondaryButton
@@ -196,7 +196,7 @@ export function QuestionnairePage() {
         </div>
       </div>
 
-      {/* ── Error banner ───────────────────────────────────────────── */}
+      {}
       {mutation.isError && (
         <div className="mb-4 flex items-center gap-3 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-800 dark:bg-red-950 dark:text-red-300">
           <AlertCircle size={16} className="shrink-0" />
@@ -204,10 +204,10 @@ export function QuestionnairePage() {
         </div>
       )}
 
-      {/* ── Form ───────────────────────────────────────────────────── */}
+      {}
       <form onSubmit={form.handleSubmit(value => mutation.mutate(value))}>
         <Card className="animate-fade-in grid gap-5 p-6">
-          {/* Step 0 – Business */}
+          {/* Step 0: Business */}
           {step === 0 && (
             <>
               <Field label="Project name" error={errors.name?.message}>
@@ -216,7 +216,7 @@ export function QuestionnairePage() {
               <Field label="Description" error={errors.description?.message}>
                 <Textarea
                   {...register('description')}
-                  placeholder="Describe what your product does and who it's for…"
+                  placeholder="Describe what your product does and who it is for"
                 />
               </Field>
               <div className="grid gap-4 md:grid-cols-3">
@@ -243,7 +243,7 @@ export function QuestionnairePage() {
             </>
           )}
 
-          {/* Step 1 – Team & Scale */}
+          {/* Step 1: Team & Scale */}
           {step === 1 && (
             <div className="grid gap-4 md:grid-cols-2">
               <Field label="Expected users (at launch)" error={errors.expected_users?.message}>
@@ -252,7 +252,7 @@ export function QuestionnairePage() {
               <Field label="Timeline pressure">
                 <Select {...register('timeline')}>
                   <option value="urgent">Urgent (MVP in &lt;3 months)</option>
-                  <option value="normal">Normal (3–6 months)</option>
+                  <option value="normal">Normal (3 to 6 months)</option>
                   <option value="flexible">Flexible (&gt;6 months)</option>
                 </Select>
               </Field>
@@ -287,7 +287,7 @@ export function QuestionnairePage() {
             </div>
           )}
 
-          {/* Step 2 – Requirements */}
+          {/* Step 2: Requirements */}
           {step === 2 && (
             <div className="grid gap-6">
               <div>
@@ -333,7 +333,7 @@ export function QuestionnairePage() {
             </div>
           )}
 
-          {/* Step 3 – Existing project */}
+          {/* Step 3: Existing project */}
           {step === 3 && (
             <div className="grid gap-5">
               <div className="flex items-start gap-3 rounded-lg border border-border bg-muted/50 p-4">
@@ -379,7 +379,7 @@ export function QuestionnairePage() {
           )}
         </Card>
 
-        {/* ── Navigation ──────────────────────────────────────────── */}
+        {}
         <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
           <SecondaryButton
             type="button"
@@ -402,7 +402,7 @@ export function QuestionnairePage() {
                     <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" strokeOpacity="0.3" />
                     <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
                   </svg>
-                  Generating…
+                  Generating...
                 </>
               ) : (
                 <>

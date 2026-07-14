@@ -45,7 +45,7 @@ function ProjectCard({ project }: { project: Project }) {
             <Calendar size={13} className="text-foreground/40" />
             <div>
               <p className="text-[10px] text-foreground/40">Timeline</p>
-              <p className="text-xs font-semibold capitalize">{project.timeline ?? '—'}</p>
+              <p className="text-xs font-semibold capitalize">{project.timeline ?? 'Not set'}</p>
             </div>
           </div>
         </div>

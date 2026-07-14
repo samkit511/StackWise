@@ -24,7 +24,7 @@ const FEATURES = [
     icon: <Layers3 size={22} />,
     title: 'Rule-based Recommendations',
     description:
-      'Every technology is scored through structured weighted rules grounded in real-world constraints — not guesswork.',
+      'Every technology is scored through structured weighted rules based on budget, scale, team skills, and project needs.',
     color: 'hsl(var(--primary))',
   },
   {
@@ -74,7 +74,7 @@ const HOW_IT_WORKS = [
 export function HomePage() {
   return (
     <div className="grid gap-12">
-      {/* ── Hero ─────────────────────────────────────────────────────── */}
+      {}
       <section className="hero-gradient relative overflow-hidden rounded-2xl border border-border bg-card px-8 py-14 md:px-12">
         {/* decorative blobs */}
         <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
@@ -106,7 +106,7 @@ export function HomePage() {
               </Link>
             </div>
             <ul className="mt-7 grid gap-2">
-              {['No AI black-box — fully explainable rule-based scoring', 'Covers architecture, cloud, DevOps, security, and cost', 'Plug-and-play Docker setup in one command'].map(point => (
+              {['Explainable rule-based scoring', 'Covers architecture, cloud, DevOps, security, and cost', 'Docker setup in one command'].map(point => (
                 <li key={point} className="flex items-start gap-2 text-sm text-foreground/70">
                   <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-success" style={{ color: 'hsl(var(--success))' }} />
                   {point}
@@ -136,12 +136,12 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* ── Features ─────────────────────────────────────────────────── */}
+      {}
       <section>
         <div className="mb-7 text-center">
           <h2 className="text-3xl font-bold">Everything in one recommendation</h2>
           <p className="mt-2 text-foreground/60">
-            From architecture pattern to monthly hosting bill — explained and justified.
+            From architecture pattern to monthly hosting bill, explained and justified.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -168,7 +168,7 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* ── How it works ─────────────────────────────────────────────── */}
+      {}
       <section>
         <div className="mb-7 text-center">
           <h2 className="text-3xl font-bold">How it works</h2>
@@ -188,11 +188,11 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* ── CTA ──────────────────────────────────────────────────────── */}
+      {}
       <section className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/8 to-accent/5 p-10 text-center">
         <h2 className="text-3xl font-bold">Ready to choose your stack?</h2>
         <p className="mx-auto mt-3 max-w-lg text-foreground/65">
-          Answer four steps about your project and get a fully explained, scored, and compatible technology recommendation in seconds.
+          Answer four steps about your project and get a scored, compatible technology recommendation.
         </p>
         <Link to="/questionnaire" className="mt-6 inline-flex">
           <Button className="gap-2 px-8 py-3 text-base">
